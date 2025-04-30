@@ -209,25 +209,16 @@ function carregaListaDespesas(despesas = [], filtro = false){
         btn.className = 'btn btn-danger'
         btn.innerHTML = '<i class="fas fa-times"></i>'
         btn.id = `id_despesa_${ d.id}` 
-        btn.onclick = function (){
-            //remover dispesas
-            
-            let id = this.id.replace('id_despesa_', '')
-            bd.remover(id)
 
-            window.location.reload()
-        }
+        // Ao clicar, o modal será aberto e o ID da despesa será armazenado
+        btn.onclick = function () {
+            let id = this.id.replace('id_despesa_', '');
+            document.getElementById('confirmarExclusao').setAttribute('data-id', id);
+            new bootstrap.Modal(document.getElementById('modalConfirmacao')).show();
+        };
         linha.insertCell(4).append(btn)
-        console.log(d)
-
-        //criando uma linha() com uma coluna() total, com o total de todas as despesas      
-
-         
-        
-        
-
-        //proximo passo fazer uma função que pecorra as despesas e pegue os valores e some
        
+        
 
    })
 
@@ -242,6 +233,16 @@ function carregaListaDespesas(despesas = [], filtro = false){
 
     return total
 }
+
+document.getElementById('confirmarExclusao').addEventListener('click', function () {
+    let id = this.getAttribute('data-id'); // Pegamos o ID armazenado no botão
+    bd.remover(id);
+    
+    // Fechar o modal e recarregar a lista de despesas
+    let modal = bootstrap.Modal.getInstance(document.getElementById('modalConfirmacao'));
+    modal.hide();
+    carregaListaDespesas();
+});
 
 
 let linhaTotal = listaDespesas.insertRow()        
