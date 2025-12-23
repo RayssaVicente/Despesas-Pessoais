@@ -26,13 +26,4 @@ Para rodar este projeto localmente, siga os passos abaixo:
 
 ### 📺 Demonstração do Projeto
 
-
-
 https://github.com/user-attachments/assets/b9dc4e33-3622-4c30-9ffd-afbb19be61fc
-
-
-
-https://github.com/user-attachments/assets/b1906d64-f6cc-4daf-b1c1-25ef2fcde2a6
-
-
-
