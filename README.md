@@ -26,5 +26,5 @@ Para rodar este projeto localmente, siga os passos abaixo:
 
 ### 📺 Demonstração do Projeto
 
-[https://github.com/RayssaVicente/Despesas-Pessoais/blob/main/midia/Uploading 2025-12-21 17-42-24.mkv…]
+[Uploading 2025-12-21 17-42-24.mkv…]()
 
